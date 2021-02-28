@@ -1,7 +1,7 @@
 # Python-Job-Scheduler
 
 
-**Introduction **
+**Introduction**
 
 •	A company, XYZ financial services, has a list of daily operation processing jobs (background jobs) which run their business operations.
 
@@ -9,7 +9,7 @@
 
 •	They require a job scheduling program which maintains the scheduling of these daily jobs. They also need the program to be dynamic, new jobs can be scheduled and scheduled jobs can be removed from the schedule during the day.
 
-**Specification **
+**Specification**
 
 •	There are a basic number of jobs that are input to the program when it starts, these jobs are added to a 'load file' the night before. The program needs to be able to load these jobs and create a starter schedule from this load file when it starts.
 
