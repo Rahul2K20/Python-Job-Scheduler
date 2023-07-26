@@ -36,7 +36,3 @@ Upon running `job_scheduler.py`, you will be presented with a menu of four optio
 2. Add a Job to Today's Schedule: You can add a job by providing the start time, duration, and job name.
 3. Remove a Job from the Schedule: You can remove a job by providing the start time, duration, and job name.
 4. Quit: This will exit the application.
-
-## License
-
-This project is licensed under the MIT License.
