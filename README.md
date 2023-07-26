@@ -37,6 +37,10 @@ Upon running `job_scheduler.py`, you will be presented with a menu of four optio
 3. Remove a Job from the Schedule: You can remove a job by providing the start time, duration, and job name.
 4. Quit: This will exit the application.
 
+## Contributing
+
+We appreciate any contributions you might want to make. Please read the contributing guidelines to learn about opening issues, creating pull requests, etc.
+
 ## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.
