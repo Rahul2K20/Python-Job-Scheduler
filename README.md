@@ -1,34 +1,36 @@
-# Python-Job-Scheduler
+Job Scheduler
+Job Scheduler is a Python-based console application that uses a Binary Search Tree (BST) data structure to manage and schedule tasks or jobs.
 
+Overview
+This project contains a Job Scheduler system that ensures no overlapping jobs are scheduled. It allows users to add, remove, or view scheduled jobs via a user-friendly command-line interface. Jobs are persistently stored in a "data.txt" file.
 
-**Introduction**
+The two primary components of this project are:
 
-•	A company, XYZ financial services, has a list of daily operation processing jobs (background jobs) which run their business operations.
+bst_demo.py: This file defines a Node class for individual tasks and a BSTDemo class for the job schedule tree. Each node contains the job's scheduled start time, duration, end time, and name.
 
-•	Jobs that load prices, transactions, validate incoming transactions, end of day reports etc.
+job_scheduler.py: This file provides a user interface for the Job Scheduler system. It reads from and writes to the "data.txt" file, storing jobs persistently.
 
-•	They require a job scheduling program which maintains the scheduling of these daily jobs. They also need the program to be dynamic, new jobs can be scheduled and scheduled jobs can be removed from the schedule during the day.
+Features
+Efficiently manages the jobs using a Binary Search Tree (BST).
+Allows the user to view the current schedule of jobs.
+Facilitates the addition of new jobs, checking for possible overlap with existing ones.
+Provides functionality to remove jobs from the schedule.
+Persists the job data in a .txt file.
+Getting Started
+To start using this project, perform the following tasks:
 
-**Specification**
+Clone the repository: git clone https://github.com/[username]/job-scheduler.git.
+Navigate to the project directory: cd job-scheduler.
+Run the job_scheduler.py script to start the application: python job_scheduler.py.
+Usage
+Upon running job_scheduler.py, you will be presented with a menu of four options:
 
-•	There are a basic number of jobs that are input to the program when it starts, these jobs are added to a 'load file' the night before. The program needs to be able to load these jobs and create a starter schedule from this load file when it starts.
+View Today's Scheduled Jobs: This will display the list of jobs scheduled for the day.
+Add a Job to Today's Schedule: You can add a job by providing the start time, duration, and job name.
+Remove a Job from the Schedule: You can remove a job by providing the start time, duration, and job name.
+Quit: This will exit the application.
+Contributing
+We appreciate any contributions you might want to make. Please read the contributing guidelines to learn about opening issues, creating pull requests, etc.
 
-•	The program needs to be dynamic - jobs can be scheduled or removed during the day. The program needs to have an interface through which new jobs can be added to the schedule and existing jobs can be removed, without changing the order of the remaining jobs already scheduled.
-
-•	Jobs can only run one at a time. There cannot be any overlap during the duration of a job. The scheduling program needs to be able to test for this while jobs are being scheduled, both dynamically and from the load file.
-
-•	The load file needs to be dynamically updated as jobs are being added or removed in the scheduling program. This is necessary to ensure that the modified daily schedule (due to add/remove transactions) are not lost when the user exits the program.
-
-**Proposed solution**
-
-•	Based on the specs, the Binary search Tree structure fits these specifications perfectly.
-
-•	The key for our nodes will be time. Since time is continuous and we can only have one job run at a given time, the BST will not allow for duplicate jobs and be easy to determine the scheduling.
-
-•	Scheduling can happen at any time for later times in the day, so the order in which jobs are scheduled (insertions) will be random, but based on the BST structure we'll always be able to get a sorted view of our data based on the ordering of nodes that a BST allows to maintain.
-
-•	We can traverse the BST easy using in-order traversal to get a sorted view of our daily scheduled jobs.
-
-•	We can easily add restrictions on the insertion of jobs to the schedule to account for no overlap.
-
-•	Insertion, removal and other operations like number of jobs, finding a specific job (not a requirement at this time) are very fast in a BST.
+License
+This project is licensed under the MIT License.
